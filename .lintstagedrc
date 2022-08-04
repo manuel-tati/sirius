@@ -1,7 +1,7 @@
 {
   "*.{ts}": [
     "eslint --fix",
-    "yarn test",
+    "prettier --write",
     "git add"
   ]
 }
