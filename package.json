@@ -9,6 +9,8 @@
     "@babel/preset-env": "^7.18.10",
     "@types/jest": "^28.1.6",
     "@types/mocha": "^9.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
     "eslint": "^8.21.0",
     "husky": "^8.0.1",
     "jest": "^28.1.3",
@@ -18,21 +20,11 @@
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "test": "jest --watchAll --collectCoverage"
+    "test": "jest --watchAll --collectCoverage",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.18.6"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.ts": [
-      "eslint 'src/**' --fix",
-      "eslint 'test/**' --fix",
-      "npm run test:staged"
-    ]
-  }
+  "repository": "git@github.com:manuel-tati/sirius.git"
 }
