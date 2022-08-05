@@ -1,7 +1,10 @@
-import users from "./mock/users/users";
+import { userRepository } from "./inMemory/user.repository";
+import { User } from "./mock/interfaces/user";
+
+const getAllUsers = (): User[] => userRepository.get("users");
 
 describe("GET ALL USERS", () => {
   test("should retrieve all users", () => {
-    expect(users.length).toBeGreaterThan(0);
+    expect(getAllUsers().length).toBeGreaterThan(0);
   });
 });
